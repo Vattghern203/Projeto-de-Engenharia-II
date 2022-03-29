@@ -85,8 +85,8 @@ body {
 .task-div {
   float: left;
   background-color: var(--cards-main);
-  width: 25%;
-  height: 300px;
+  width: 15%;
+  height: 325px;
   line-height: 25px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   text-align: center;
