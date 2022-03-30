@@ -102,18 +102,3 @@ body {
   box-shadow: 5px 10px 20px 5px rgba(0,0,0,0.2);
   
 }
-
-.pop-up {
-  background-color: var(--menu-main);
-  margin: auto;
-  padding: 10px 12px;
-  color: white;
-  height: 400px;
-  width: 250px;
-  text-align: center;
-}
-
-.pop-up > input {
-  margin: 20px auto;
-  padding: 10px 12px;
-}
