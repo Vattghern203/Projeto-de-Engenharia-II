@@ -7,3 +7,7 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
+
+function openForm() {
+  document.getElementById("create-form").style.display = 'block'
+}
