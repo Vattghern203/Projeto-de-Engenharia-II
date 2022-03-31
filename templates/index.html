@@ -11,6 +11,7 @@
 <body>
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Login</a>
         <a href="#" onclick="openForm(), closeNav()">Criar Task</a>
         <a href="#">Progresso</a>
         <a href="{{url_for('status')}}">Status</a>
@@ -19,13 +20,17 @@
 
     <div id="create-form" class="pop-up">
         <form method="POST" action="{{url_for('criar')}}">
+            <span id="close-btn" onclick="closeForm()">X</span>
+
             <h1>Crie Sua Tarefa</h1>
 
-            <input type="text" name="nome" id="nome" placeholder="Nome..."> <br>
+            <input type="hidden" name="proxima" value="{{ proxima or url_for('index') }}">
+
+            <input type="text" name="nome" id="nome" placeholder="Nome..." required> <br>
 
             <input type="text" name="descricao" id="descricao" placeholder="Descrição da Tarefa..."> <br>
 
-            <input type="text" name="tipo" id="tipo" placeholder="Tipo de Tarefa..."> <br>
+            <input type="text" name="tipo" id="tipo" placeholder="Tipo de Tarefa..." required> <br>
 
             <input type="text" name="status" id="status" placeholder="Status da Tarefa..."> <br>
 

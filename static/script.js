@@ -11,3 +11,7 @@ function closeNav() {
 function openForm() {
   document.getElementById("create-form").style.display = 'block'
 }
+
+function closeForm() {
+  document.getElementById("create-form").style.display = 'none'
+}

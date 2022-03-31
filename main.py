@@ -22,7 +22,9 @@ tarefa_dao = TarefaDao(db)
 
 @app.route('/')
 def index():
-    return render_template('index.html', tarefas=lista)
+    proxima = request.args.get('proxima')
+    
+    return render_template('index.html', proxima=proxima)
 
 
 @app.route('/novo')
@@ -31,7 +33,7 @@ def novo():
     return render_template('novo.html')
 
 
-@app.route('/criar', methods=['POST, '])
+@app.route('/criar', methods=['POST', ])
 def criar():
     nome = request.form['nome']
     descricao = request.form['descricao']
@@ -43,7 +45,7 @@ def criar():
     
     tarefa = tarefa_dao.salvar(tarefa)
     
-    return redirect('/novo')
+    return redirect('/')
 
 
 @app.route('/status')
