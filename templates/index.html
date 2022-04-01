@@ -11,12 +11,32 @@
 <body>
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">Login</a>
-        <a href="#" onclick="openForm(), closeNav()">Criar Task</a>
+        <a href="#" onclick="openLogin()">Login</a>
+        <a href="#" onclick="openForm()">Criar Task</a>
         <a href="#">Progresso</a>
         <a href="{{url_for('status')}}">Status</a>
         <a href="{{url_for('sobre')}}">About</a>
     </div>
+
+    <!--Modal para o login e autenticação-->
+
+    <div id="login-form" class="pop-up">
+        <form method="POST" action="{{url_for('autenticar')}}">
+            <span id="close-btn" onclick="closeLogin()">X</span>
+
+            <h1>Faça Seu Login Aqui</h1>
+
+            <input type="hidden" name="proxima" value="{{ proxima or url_for('index') }}">
+
+            <input type="email" name="email" id="email" required placeholder="E-mail..."> <br>
+
+            <input type="password" name="senha" id="senha" required placeholder="Password...">  <br>
+
+            <button class="submit-btn" type="submit">OK</button>
+        </form>
+    </div>
+
+    <!--Modal para a criação de tarefas-->
 
     <div id="create-form" class="pop-up">
         <form method="POST" action="{{url_for('criar')}}">

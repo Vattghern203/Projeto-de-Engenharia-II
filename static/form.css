@@ -27,7 +27,7 @@ form > h1 {
     color: whitesmoke;
 }
 
-input[type=text], select, textarea {
+input, select, textarea {
     text-decoration: none;
     outline: none;
     border: none;
@@ -39,7 +39,7 @@ input[type=text], select, textarea {
     align-items: center;
 }
 
-input[type=text]:hover {
+input:hover {
     outline: auto;
 }
 

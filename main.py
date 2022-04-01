@@ -26,6 +26,10 @@ def index():
     
     return render_template('index.html', proxima=proxima)
 
+@app.route('/autenticar')
+def autenticar():
+    
+    return redirect('/')
 
 @app.route('/novo')
 def novo():
